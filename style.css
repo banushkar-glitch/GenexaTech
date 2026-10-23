@@ -1,0 +1,3186 @@
+/* =========================================================
+   GENEXA TECH
+   MAIN STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+
+    font-family: "Inter", sans-serif;
+
+    background-color: #0d0f17;
+    color: #f3f4f6;
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* =========================================================
+   RESPONSIVE FOUNDATION
+   ========================================================= */
+
+section,
+header,
+footer,
+main,
+div {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   END
+   ========================================================= */
+
+
+
+   /* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(2, 6, 23, 0.90);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(30, 41, 59, 0.60);
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.header-container {
+    width: min(100% - 48px, 1440px);
+
+    margin-inline: auto;
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BRAND LOGO
+   ========================================================= */
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #1C4267;
+
+    border: 1px solid rgba(242, 82, 46, 0.30);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.25s ease;
+}
+
+.brand:hover .brand-logo {
+    transform: scale(1.05);
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+.brand-name {
+    font-family: "Inter", sans-serif;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+.brand-name span {
+    color: #F2522E;
+}
+
+
+.brand-tagline {
+    margin-top: 3px;
+
+    font-family: monospace;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    color: #94a3b8;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #cbd5e1;
+}
+
+
+.desktop-nav > a {
+    position: relative;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.desktop-nav > a:not(.contact-button):hover {
+    color: #F2522E;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    border-radius: 12px;
+
+    background: #F2522E;
+
+    color: #ffffff !important;
+
+    font-weight: 600;
+
+    box-shadow: 0 8px 20px rgba(242, 82, 46, 0.20);
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.contact-button:hover {
+    background: #d94220;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 10px 24px rgba(242, 82, 46, 0.28);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #334155;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE HEADER
+   ========================================================= */
+
+/*
+   The navigation automatically switches to the
+   mobile menu when the available width becomes smaller.
+*/
+
+@media (max-width: 900px) {
+
+    .header-container {
+        width: min(100% - 32px, 1440px);
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+
+        width: min(100% - 32px, 1440px);
+
+        margin: 0 auto;
+
+        padding: 12px 0 20px;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .mobile-nav.open {
+        display: flex;
+    }
+
+    .mobile-nav > a {
+        padding: 12px 14px;
+
+        border-radius: 10px;
+
+        color: #cbd5e1;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease;
+    }
+
+    .mobile-nav > a:hover {
+        background: rgba(28, 66, 103, 0.35);
+
+        color: #F2522E;
+    }
+
+    .mobile-nav .contact-button {
+        margin-top: 6px;
+
+        color: #ffffff !important;
+
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .header-container {
+        width: calc(100% - 24px);
+
+        min-height: 68px;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .brand-tagline {
+        font-size: 8px;
+        letter-spacing: 0.06em;
+    }
+
+    .mobile-nav {
+        width: calc(100% - 24px);
+    }
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+   .hero-section {
+    width: 100%;
+
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+    align-items: center;
+
+    padding-top: clamp(25px, 4vw, 50px);
+
+    padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+   .hero-container {
+    width: min(100% - 48px, 1440px);
+
+    margin-inline: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(300px, 1fr);
+
+    align-items: center;
+
+    gap: clamp(30px, 5vw, 70px);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+    width: 100%;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO BADGE
+   ========================================================= */
+
+.hero-badge {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 5px 12px;
+
+    margin-bottom: clamp(20px, 2.5vw, 28px);
+
+    border-radius: 999px;
+
+    background: rgba(28, 66, 103, 0.60);
+
+    border: 1px solid rgba(242, 82, 46, 0.40);
+
+    color: #F2522E;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+
+.hero-badge-dot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #F2522E;
+
+    animation: heroPulse 1.8s ease-in-out infinite;
+}
+
+
+@keyframes heroPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.55;
+        transform: scale(0.85);
+    }
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.hero-title {
+    margin: 0;
+
+    max-width: 850px;
+
+    font-family: "Raleway", sans-serif;
+
+    /*
+       Automatically scales between screens.
+       No fixed desktop/mobile font required.
+    */
+
+    font-size: clamp(2.35rem, 4.5vw, 3.75rem);
+
+    font-weight: 800;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.035em;
+
+    color: #ffffff;
+}
+
+
+.hero-title span {
+    color: #F2522E;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+    max-width: 760px;
+
+    margin-top: clamp(20px, 2.5vw, 30px);
+
+    margin-bottom: clamp(24px, 3vw, 34px);
+
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+
+    line-height: 1.75;
+
+    color: #D9CEB0;
+}
+
+
+.hero-description strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.hero-button {
+    min-height: 56px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding-inline: clamp(22px, 2.5vw, 28px);
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primary-button {
+    background: #F2522E;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(242, 82, 46, 0.25);
+}
+
+
+.primary-button:hover {
+    background: #d94220;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(242, 82, 46, 0.32);
+}
+
+
+.primary-button i {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-button {
+    background: #1C4267;
+
+    border: 1px solid #334155;
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+.secondary-button:hover {
+    background: #153452;
+
+    transform: translateY(-2px);
+
+    border-color: #475569;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO IMAGE CARD
+   ========================================================= */
+
+   .hero-image-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    position: relative;
+
+    padding: 0;
+
+    overflow: visible;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   HERO GLOW
+   ========================================================= */
+
+.hero-glow {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -48px;
+    right: -48px;
+
+    border-radius: 50%;
+
+    background: rgba(242, 82, 46, 0.20);
+
+    filter: blur(45px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO IMAGE WRAPPER
+   ========================================================= */
+
+.hero-image-wrapper {
+    width: 100%;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.hero-image {
+    width: 100%;
+
+    height: auto;
+
+    max-height: 380px;
+
+    object-fit: contain;
+
+    margin-inline: auto;
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   FALLBACK CONTENT
+   ========================================================= */
+
+.hero-fallback {
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 32px 16px;
+
+    text-align: center;
+}
+
+
+.hero-fallback.show {
+    display: flex;
+}
+
+
+.fallback-bulb {
+    position: relative;
+
+    width: 96px;
+    height: 96px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fallback-bulb::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background: rgba(242, 82, 46, 0.30);
+
+    filter: blur(20px);
+}
+
+
+.fallback-bulb-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 96px;
+    height: 96px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #0f172a;
+
+    border: 2px solid #F2522E;
+
+    box-shadow:
+        0 0 25px rgba(242, 82, 46, 0.35);
+}
+
+
+.fallback-bulb-inner i {
+    font-size: 48px;
+
+    color: #F2522E;
+}
+
+
+.hero-fallback h3 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+.hero-fallback > p {
+    max-width: 300px;
+
+    margin-bottom: 16px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FALLBACK STATUS
+   ========================================================= */
+
+.fallback-status {
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: rgba(2, 6, 23, 0.80);
+
+    border: 1px solid rgba(30, 41, 59, 0.80);
+
+    text-align: left;
+}
+
+
+.status-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+
+    font-family: monospace;
+
+    font-size: 11px;
+}
+
+
+.status-row span:first-child {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.status-row i {
+    color: #F2522E;
+}
+
+
+.status-row span:last-child {
+    color: #34d399;
+
+    white-space: nowrap;
+}
+
+
+.status-bar {
+    width: 100%;
+
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #1e293b;
+}
+
+
+.status-bar div {
+    width: 80%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #F2522E;
+}
+
+
+/* =========================================================
+   HERO RESPONSIVENESS
+   ========================================================= */
+
+/*
+   At medium screen sizes the two columns become
+   slightly more balanced.
+*/
+
+@media (max-width: 1100px) {
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(280px, 0.85fr);
+
+        gap: 40px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    }
+
+}
+
+
+/*
+   At smaller screens the Hero becomes ONE column.
+*/
+
+@media (max-width: 800px) {
+
+    .hero-section {
+        min-height: auto;
+
+        padding-block:
+            clamp(50px, 10vw, 80px);
+    }
+
+    .hero-container {
+        width: min(100% - 32px, 700px);
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-badge {
+        margin-inline: auto;
+    }
+
+    .hero-title {
+        max-width: 700px;
+
+        margin-inline: auto;
+
+        font-size: clamp(
+            2.15rem,
+            8vw,
+            3.5rem
+        );
+    }
+
+    .hero-description {
+        margin-inline: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .hero-image-card {
+        max-width: 560px;
+    }
+
+}
+
+
+/*
+   Small mobile screens.
+*/
+
+@media (max-width: 480px) {
+
+    .hero-container {
+        width: calc(100% - 24px);
+
+        gap: 38px;
+    }
+
+    .hero-badge {
+        max-width: 100%;
+
+        font-size: 10px;
+
+        padding: 5px 10px;
+    }
+
+    .hero-title {
+        font-size: clamp(
+            2rem,
+            10vw,
+            2.7rem
+        );
+
+        line-height: 1.13;
+    }
+
+    .hero-description {
+        font-size: 15px;
+
+        line-height: 1.65;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+    .hero-image-card {
+        padding: 14px;
+
+        border-radius: 20px;
+    }
+
+}
+
+/* =========================================================
+   PORTFOLIO SECTION
+   ========================================================= */
+
+   .portfolio-section {
+    width: 100%;
+
+    padding-block: clamp(60px, 7vw, 80px);
+
+    border-top: 1px solid rgba(30, 41, 59, 0.60);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PORTFOLIO HEADER
+   ========================================================= */
+
+.portfolio-header {
+    width: min(100% - 48px, 1440px);
+
+    margin-inline: auto;
+
+    margin-bottom: 40px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+.portfolio-heading {
+    min-width: 0;
+}
+
+
+.section-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #F2522E;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.portfolio-heading h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.5rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   PORTFOLIO CONTROLS
+   ========================================================= */
+
+.portfolio-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+.portfolio-control {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #334155;
+
+    border-radius: 12px;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.portfolio-control:hover {
+    background: #1e293b;
+
+    color: #ffffff;
+
+    border-color: #475569;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PORTFOLIO SLIDER
+   ========================================================= */
+
+.portfolio-slider {
+    width: 100%;
+
+    padding-left:
+        max(24px, calc((100vw - 1440px) / 2 + 24px));
+
+    padding-right: 24px;
+
+    padding-bottom: 12px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 24px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+
+
+.portfolio-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   PORTFOLIO CARD
+   ========================================================= */
+
+.portfolio-card {
+    flex: 0 0 clamp(
+        320px,
+        30vw,
+        400px
+    );
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: rgba(28, 66, 103, 0.40);
+
+    border: 1px solid #1e293b;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.portfolio-card:hover {
+    border-color: rgba(242, 82, 46, 0.50);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   PORTFOLIO IMAGE
+   ========================================================= */
+
+.portfolio-image {
+    width: 100%;
+
+    height: 224px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1C4267 0%,
+            #111827 100%
+        );
+}
+
+
+.portfolio-image img {
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    z-index: 2;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   IMAGE FALLBACK
+   ========================================================= */
+
+.portfolio-image-fallback {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 16px;
+
+    text-align: center;
+
+    color: #cbd5e1;
+}
+
+
+.portfolio-image-fallback i {
+    font-size: 40px;
+
+    color: #F2522E;
+}
+
+
+.portfolio-image-fallback span {
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.portfolio-card-content {
+    min-height: 300px;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   CARD META
+   ========================================================= */
+
+.portfolio-card-meta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 8px;
+}
+
+
+.portfolio-category {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.metersay-category {
+    color: #F2522E;
+}
+
+
+.friqui-category {
+    color: #c084fc;
+}
+
+
+.saas-category {
+    color: #818cf8;
+}
+
+
+.portfolio-status {
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background: #1D283E;
+
+    color: #cbd5e1;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.portfolio-card-content h3 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.portfolio-card-content p {
+    margin-bottom: 16px;
+
+    color: #D9CEB0;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+.portfolio-card-content p strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD TECH
+   ========================================================= */
+
+.portfolio-tech {
+    margin-top: auto;
+
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(30, 41, 59, 0.80);
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.portfolio-tech strong {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   PORTFOLIO RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .portfolio-header {
+        width: min(100% - 32px, 700px);
+
+        margin-bottom: 32px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .portfolio-controls {
+        align-self: flex-end;
+    }
+
+    .portfolio-slider {
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+        gap: 18px;
+    }
+
+    .portfolio-card {
+        flex-basis: min(
+            400px,
+            calc(100vw - 48px)
+        );
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .portfolio-section {
+        padding-block: 55px;
+    }
+
+    .portfolio-header {
+        width: calc(100% - 24px);
+    }
+
+    .portfolio-slider {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+    .portfolio-card {
+        flex-basis: calc(100vw - 40px);
+    }
+
+    .portfolio-image {
+        height: 210px;
+    }
+
+    .portfolio-card-content {
+        padding: 20px;
+
+        min-height: 280px;
+    }
+
+    .portfolio-card-content h3 {
+        font-size: 22px;
+    }
+
+}
+
+/* =========================================================
+   SERVICES SECTION
+   ========================================================= */
+
+   .services-section {
+    width: 100%;
+
+    padding-block: clamp(60px, 7vw, 80px);
+
+    padding-inline: max(
+        24px,
+        calc((100vw - 1440px) / 2 + 24px)
+    );
+
+    border-top: 1px solid rgba(30, 41, 59, 0.60);
+}
+
+
+/* =========================================================
+   SERVICES HEADER
+   ========================================================= */
+
+.services-header {
+    width: min(100%, 768px);
+
+    margin-inline: auto;
+
+    margin-bottom: clamp(40px, 5vw, 64px);
+
+    text-align: center;
+}
+
+
+.services-header h2 {
+    margin-top: 4px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.5rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+.services-header p {
+    margin-top: 12px;
+
+    color: #D9CEB0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+   ========================================================= */
+
+.services-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.service-card {
+    min-width: 0;
+
+    min-height: 260px;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-radius: 16px;
+
+    background: rgba(28, 66, 103, 0.30);
+
+    border: 1px solid #1e293b;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.service-card:hover {
+    border-color: rgba(242, 82, 46, 0.50);
+
+    transform: translateY(-3px);
+
+    background: rgba(28, 66, 103, 0.38);
+}
+
+
+/* =========================================================
+   SERVICE ICON
+   ========================================================= */
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 16px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    font-size: 20px;
+}
+
+
+/* Individual icon colors */
+
+.ai-icon {
+    color: #F2522E;
+}
+
+.mobile-icon {
+    color: #38bdf8;
+}
+
+.api-icon {
+    color: #34d399;
+}
+
+.analytics-icon {
+    color: #fbbf24;
+}
+
+.marketing-icon {
+    color: #fb7185;
+}
+
+.ecommerce-icon {
+    color: #c084fc;
+}
+
+.startup-icon {
+    color: #818cf8;
+}
+
+.consulting-icon {
+    color: #2dd4bf;
+}
+
+.uiux-icon {
+    color: #f472b6;
+}
+
+.cloud-icon {
+    color: #22d3ee;
+}
+
+.support-icon {
+    color: #60a5fa;
+}
+
+.backend-icon {
+    color: #a78bfa;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+   ========================================================= */
+
+.service-card h3 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   SERVICE DESCRIPTION
+   ========================================================= */
+
+.service-card p {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SERVICES RESPONSIVE
+   ========================================================= */
+
+/*
+   Medium screens:
+   2 columns
+*/
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+/*
+   Small screens:
+   1 column
+*/
+
+@media (max-width: 650px) {
+
+    .services-section {
+        padding-inline: 16px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .service-card {
+        min-height: auto;
+
+        padding: 22px;
+    }
+
+}
+
+
+/*
+   Very small screens
+*/
+
+@media (max-width: 420px) {
+
+    .services-section {
+        padding-inline: 12px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   WHY GENEXA SECTION
+   ========================================================= */
+
+   .why-section {
+    width: 100%;
+
+    padding-block: clamp(60px, 7vw, 80px);
+
+    padding-inline: max(
+        24px,
+        calc((100vw - 1440px) / 2 + 24px)
+    );
+
+    border-top: 1px solid rgba(30, 41, 59, 0.60);
+
+    background: rgba(15, 23, 42, 0.30);
+}
+
+
+/* =========================================================
+   WHY HEADER
+   ========================================================= */
+
+.why-header {
+    width: min(100%, 768px);
+
+    margin-inline: auto;
+
+    margin-bottom: clamp(40px, 5vw, 64px);
+
+    text-align: center;
+}
+
+
+.why-header h2 {
+    margin-top: 4px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.5rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   WHY GRID
+   ========================================================= */
+
+.why-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   WHY CARD
+   ========================================================= */
+
+.why-card {
+    min-width: 0;
+
+    padding: 24px;
+
+    border-radius: 16px;
+
+    background: rgba(28, 66, 103, 0.40);
+
+    border: 1px solid #1e293b;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.why-card:hover {
+    border-color: rgba(242, 82, 46, 0.50);
+
+    background: rgba(28, 66, 103, 0.48);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   WHY ICON
+   ========================================================= */
+
+.why-icon {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #F2522E;
+
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   WHY CARD TITLE
+   ========================================================= */
+
+.why-card h3 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   WHY CARD DESCRIPTION
+   ========================================================= */
+
+.why-card p {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   WHY RESPONSIVE
+   ========================================================= */
+
+/*
+   Medium screens:
+   2 columns
+*/
+
+@media (max-width: 1000px) {
+
+    .why-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+/*
+   Small screens:
+   1 column
+*/
+
+@media (max-width: 650px) {
+
+    .why-section {
+        padding-inline: 16px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .why-card {
+        padding: 22px;
+    }
+
+}
+
+
+/*
+   Very small screens
+*/
+
+@media (max-width: 420px) {
+
+    .why-section {
+        padding-inline: 12px;
+    }
+
+    .why-card {
+        padding: 20px;
+    }
+
+    .why-card h3 {
+        font-size: 17px;
+    }
+
+    .why-card p {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   OUR STORY SECTION
+   ========================================================= */
+
+   .story-section {
+    width: 100%;
+
+    padding-block: clamp(60px, 7vw, 80px);
+
+    padding-inline: max(
+        24px,
+        calc((100vw - 1440px) / 2 + 24px)
+    );
+
+    border-top: 1px solid rgba(30, 41, 59, 0.60);
+}
+
+
+/* =========================================================
+   STORY CONTAINER
+   ========================================================= */
+
+.story-container {
+    width: min(100%, 900px);
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(35px, 6vw, 70px);
+}
+
+
+/* =========================================================
+   FOUNDER IMAGE
+   ========================================================= */
+
+.founder-image-wrapper {
+    width: 160px;
+    height: 160px;
+
+    flex: 0 0 160px;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #1C4267;
+    border: 2px solid #F2522E;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.30);
+
+        transform: translate(clamp(-70px, -4vw, -25px), -95px);
+}
+
+
+.founder-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   FOUNDER FALLBACK
+   ========================================================= */
+
+.founder-fallback {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background: #1C4267;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.founder-fallback span {
+    margin-top: 4px;
+
+    color: #F2522E;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   STORY CONTENT
+   ========================================================= */
+
+.story-content {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.story-content h2 {
+    margin-top: 4px;
+
+    margin-bottom: 2px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.25rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   FOUNDER ROLE
+   ========================================================= */
+
+.founder-role {
+    margin-bottom: 16px;
+
+    color: #F2522E;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   STORY DESCRIPTION
+   ========================================================= */
+
+.story-description {
+    color: #D9CEB0;
+
+    font-size: clamp(
+        1rem,
+        1.3vw,
+        1.125rem
+    );
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   STORY RESPONSIVE
+   ========================================================= */
+
+/*
+   Smaller screens:
+   Stack founder image and text.
+*/
+
+@media (max-width: 700px) {
+
+    .story-section {
+        padding-inline: 16px;
+    }
+
+    .story-container {
+        width: min(100%, 600px);
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 28px;
+    }
+
+    .founder-image-wrapper {
+        width: 150px;
+        height: 150px;
+
+        flex-basis: 150px;
+    }
+
+    .story-content {
+        width: 100%;
+    }
+
+    .story-content .section-label {
+        margin-bottom: 4px;
+    }
+
+    .story-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/*
+   Very small screens.
+*/
+
+@media (max-width: 420px) {
+
+    .story-section {
+        padding-inline: 12px;
+    }
+
+    .founder-image-wrapper {
+        width: 135px;
+        height: 135px;
+
+        flex-basis: 135px;
+    }
+
+    .founder-role {
+        font-size: 15px;
+    }
+
+    .story-description {
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+   .contact-section {
+    width: 100%;
+
+    padding-block: clamp(60px, 7vw, 80px);
+
+    padding-inline: max(
+        24px,
+        calc((100vw - 1440px) / 2 + 24px)
+    );
+
+    border-top: 1px solid rgba(30, 41, 59, 0.60);
+}
+
+
+/* =========================================================
+   CONTACT CARD
+   ========================================================= */
+
+.contact-card {
+    width: min(100%, 768px);
+
+    margin-inline: auto;
+
+    padding: clamp(
+        32px,
+        5vw,
+        48px
+    );
+
+    border-radius: 24px;
+
+    background: rgba(28, 66, 103, 0.40);
+
+    border: 1px solid #1e293b;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   CONTACT HEADER
+   ========================================================= */
+
+.contact-header {
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+
+.contact-header h2 {
+    margin-top: 4px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.5rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    width: 100%;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   INPUTS + TEXTAREA
+   ========================================================= */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    display: block;
+
+    padding: 14px 16px;
+
+    border: 1px solid #334155;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #1C4267;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.form-group input {
+    min-height: 54px;
+}
+
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #F2522E;
+
+    box-shadow:
+        0 0 0 3px rgba(242, 82, 46, 0.12);
+
+    background: #214c75;
+}
+
+
+/* =========================================================
+   EMAIL + PHONE ROW
+   ========================================================= */
+
+.form-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.submit-button {
+    width: 100%;
+
+    min-height: 56px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #F2522E;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(242, 82, 46, 0.20);
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.submit-button:hover {
+    background: #d94220;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(242, 82, 46, 0.28);
+}
+
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONTACT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .contact-section {
+        padding-inline: 16px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+
+        border-radius: 20px;
+    }
+
+    .contact-header {
+        margin-bottom: 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .contact-section {
+        padding-inline: 12px;
+    }
+
+    .contact-card {
+        padding: 24px 16px;
+    }
+
+    .contact-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================================
+   FAQ SECTION
+   ========================================================= */
+
+   .faq-section {
+    width: 100%;
+
+    padding-block: clamp(60px, 7vw, 80px);
+
+    padding-inline: max(
+        24px,
+        calc((100vw - 1440px) / 2 + 24px)
+    );
+
+    border-top: 1px solid rgba(30, 41, 59, 0.60);
+}
+
+
+/* =========================================================
+   FAQ HEADER
+   ========================================================= */
+
+.faq-header {
+    width: min(100%, 768px);
+
+    margin-inline: auto;
+
+    margin-bottom: clamp(35px, 5vw, 48px);
+
+    text-align: center;
+}
+
+
+.faq-header h2 {
+    margin-top: 4px;
+
+    color: #ffffff;
+
+    font-family: "Raleway", sans-serif;
+
+    font-size: clamp(
+        1.8rem,
+        3vw,
+        2.5rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   FAQ LIST
+   ========================================================= */
+
+.faq-list {
+    width: min(100%, 768px);
+
+    margin-inline: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+   ========================================================= */
+
+.faq-item {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: rgba(28, 66, 103, 0.30);
+
+    border: 1px solid #1e293b;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.faq-item:hover {
+    border-color: rgba(71, 85, 105, 0.90);
+}
+
+
+.faq-item.active {
+    border-color: rgba(242, 82, 46, 0.35);
+
+    background: rgba(28, 66, 103, 0.36);
+}
+
+
+/* =========================================================
+   FAQ QUESTION
+   ========================================================= */
+
+.faq-question {
+    width: 100%;
+
+    min-height: 64px;
+
+    padding: 20px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.faq-question span {
+    min-width: 0;
+}
+
+
+.faq-question i {
+    flex-shrink: 0;
+
+    color: #F2522E;
+
+    font-size: 14px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   FAQ ANSWER
+   ========================================================= */
+
+.faq-answer {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows 0.3s ease;
+}
+
+
+.faq-answer-content {
+    min-height: 0;
+
+    overflow: hidden;
+
+    padding-inline: 24px;
+
+    color: #D9CEB0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    transition:
+        padding-bottom 0.3s ease;
+}
+
+
+.faq-answer-content strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   OPEN FAQ
+   ========================================================= */
+
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+
+.faq-item.active .faq-answer-content {
+    padding-bottom: 20px;
+}
+
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   FAQ RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .faq-section {
+        padding-inline: 16px;
+    }
+
+    .faq-list {
+        gap: 12px;
+    }
+
+    .faq-question {
+        min-height: 60px;
+
+        padding: 18px;
+
+        font-size: 14px;
+
+        gap: 14px;
+    }
+
+    .faq-answer-content {
+        padding-inline: 18px;
+
+        font-size: 13px;
+    }
+
+    .faq-item.active .faq-answer-content {
+        padding-bottom: 18px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .faq-section {
+        padding-inline: 12px;
+    }
+
+    .faq-question {
+        padding: 16px;
+
+        font-size: 13px;
+    }
+
+    .faq-answer-content {
+        padding-inline: 16px;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+   .site-footer {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(28, 66, 103, 0.30);
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  /* Footer Brand */
+  
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-brand img {
+    width: 50px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+  
+  .footer-logo {
+    width: 46px;
+    height: 46px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 50%;
+    background: #ffffff;
+    color: #0a373b;
+  
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  
+  .footer-brand-text h3 {
+    margin: 0 0 5px;
+  
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+  
+    color: #ffffff;
+  }
+  
+  .footer-brand-text p {
+    margin: 0;
+  
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+  
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Social Icons */
+  
+  .footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .footer-socials a {
+    width: 40px;
+    height: 40px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+  
+    color: #ffffff;
+    text-decoration: none;
+  
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease;
+  }
+  
+  .footer-socials a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+  }
+  
+  /* =========================================================
+     FOOTER RESPONSIVE
+     ========================================================= */
+  
+  @media (max-width: 700px) {
+  
+    .site-footer {
+      padding: 32px 0;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-brand {
+      flex-direction: column;
+    }
+  
+    .footer-brand-text p {
+      max-width: 320px;
+    }
+  
+  }
+
+
+  /* =========================================
+   MOBILE OUR STORY ALIGNMENT FIX
+   Desktop layout remains unchanged
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .story-section {
+        padding: 40px 16px;
+        overflow: hidden;
+    }
+
+    .story-container {
+        width: 100%;
+        max-width: 520px;
+        margin-inline: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 24px;
+        text-align: center;
+    }
+
+    .founder-image-wrapper {
+        width: clamp(120px, 36vw, 150px);
+        height: clamp(120px, 36vw, 150px);
+
+        flex: 0 0 auto;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .story-content {
+        width: 100%;
+        max-width: 520px;
+        flex: none;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .story-content h2 {
+        font-size: clamp(24px, 7vw, 32px);
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+
+    .founder-role {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .story-description {
+        max-width: 100%;
+        margin-inline: auto;
+        font-size: clamp(14px, 3.8vw, 16px);
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+}
+
