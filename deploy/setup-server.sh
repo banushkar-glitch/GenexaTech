@@ -6,8 +6,8 @@
 #   e.g.  sudo bash deploy/setup-server.sh genexatech.13-233-12-191.sslip.io
 #   later sudo bash deploy/setup-server.sh genexatech.com www.genexatech.com
 #
-# Safe to run again: it rewrites only the GenexaTech Nginx site and leaves the
-# Firqui site, its files and its settings alone.
+# Safe to run again: an existing GenexaTech Nginx site is kept, and the Firqui
+# site, its files and its settings are never touched.
 
 set -euo pipefail
 
@@ -23,8 +23,14 @@ echo "==> Creating $SITE_DIR (owned by $OWNER, so releases need no sudo)"
 mkdir -p "$SITE_DIR"
 chown "$OWNER:$OWNER" "$SITE_DIR"
 
-echo "==> Installing Nginx site for: $*"
-sed "s/__SERVER_NAMES__/$*/" "$DEPLOY_DIR/nginx.conf" > "$NGINX_SITE"
+# Certbot adds the HTTPS settings to the installed file, so an existing site is
+# kept unless REPLACE=1 (then run Certbot again afterwards)
+if [ ! -f "$NGINX_SITE" ] || [ "${REPLACE:-0}" = "1" ]; then
+    echo "==> Installing Nginx site for: $*"
+    sed "s/__SERVER_NAMES__/$*/" "$DEPLOY_DIR/nginx.conf" > "$NGINX_SITE"
+else
+    echo "==> Nginx site already exists, keeping it (REPLACE=1 to rewrite it)"
+fi
 ln -sf "$NGINX_SITE" /etc/nginx/sites-enabled/genexatech
 nginx -t
 systemctl reload nginx

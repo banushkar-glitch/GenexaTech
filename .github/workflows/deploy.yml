@@ -1,4 +1,4 @@
-# Deploys the GenexaTech site whenever main changes.
+# Deploys the GenexaTech site (https://genexatech.com) whenever main changes.
 #
 # It runs on the same EC2 server as Firqui Jewels, as a second Nginx site.
 # 1. Gets short-lived AWS permission through OIDC (no AWS keys stored in GitHub)
@@ -31,8 +31,7 @@ env:
   DEPLOY_HOST: 13.233.12.191
   # The server's SSH host key, so the runner refuses to talk to an impostor
   DEPLOY_HOST_KEY: "13.233.12.191 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPsFMPgv6GwLaJQlPr4wZyZCevJaDZhaGITa+dPASKyg"
-  # Change to the real domain once it points at the server
-  SITE_URL: http://genexatech.13-233-12-191.sslip.io
+  SITE_URL: https://genexatech.com
 
 jobs:
   deploy:
